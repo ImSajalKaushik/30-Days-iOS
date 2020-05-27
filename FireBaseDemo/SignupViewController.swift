@@ -36,6 +36,7 @@ class SignupViewController: UIViewController {
                     print("error in sign up:", err!.localizedDescription)
                 } else {
                     let uid = result?.user.uid
+                    print("Success", result?.credential)
                 }
             }
         }

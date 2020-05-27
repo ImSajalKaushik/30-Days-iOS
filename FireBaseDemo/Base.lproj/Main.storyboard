@@ -55,16 +55,59 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ZFL-Mu-mri">
             <objects>
-                <viewController id="Nqo-aR-S4q" sceneMemberID="viewController">
+                <viewController id="Nqo-aR-S4q" customClass="LoginViewController" customModule="FireBaseDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A0a-ii-M7J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UY6-7f-x7g">
+                                <rect key="frame" x="186" y="40" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4u-Ty-FVF">
+                                <rect key="frame" x="20" y="80.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yun-03-9na">
+                                <rect key="frame" x="20" y="134.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xx-w2-5TI">
+                                <rect key="frame" x="20" y="758" width="374" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="Nqo-aR-S4q" eventType="touchUpInside" id="fnU-YS-NGe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UY6-7f-x7g" firstAttribute="top" secondItem="Yp4-eZ-Q6r" secondAttribute="top" constant="40" id="4Cd-Al-yXC"/>
+                            <constraint firstItem="yun-03-9na" firstAttribute="top" secondItem="v4u-Ty-FVF" secondAttribute="bottom" constant="20" id="6Ef-xa-iv6"/>
+                            <constraint firstItem="v4u-Ty-FVF" firstAttribute="leading" secondItem="Yp4-eZ-Q6r" secondAttribute="leading" constant="20" id="Be1-NT-RQs"/>
+                            <constraint firstItem="yun-03-9na" firstAttribute="leading" secondItem="Yp4-eZ-Q6r" secondAttribute="leading" constant="20" id="ERI-lD-9Ae"/>
+                            <constraint firstItem="Yp4-eZ-Q6r" firstAttribute="bottom" secondItem="8Xx-w2-5TI" secondAttribute="bottom" constant="20" id="Fb3-ny-ubb"/>
+                            <constraint firstItem="Yp4-eZ-Q6r" firstAttribute="trailing" secondItem="v4u-Ty-FVF" secondAttribute="trailing" constant="20" id="OZ1-sU-KxK"/>
+                            <constraint firstItem="8Xx-w2-5TI" firstAttribute="leading" secondItem="Yp4-eZ-Q6r" secondAttribute="leading" constant="20" id="Zk3-4D-Qzb"/>
+                            <constraint firstItem="UY6-7f-x7g" firstAttribute="centerX" secondItem="A0a-ii-M7J" secondAttribute="centerX" id="lCn-4r-Uma"/>
+                            <constraint firstItem="Yp4-eZ-Q6r" firstAttribute="trailing" secondItem="8Xx-w2-5TI" secondAttribute="trailing" constant="20" id="pfu-UJ-e6b"/>
+                            <constraint firstItem="Yp4-eZ-Q6r" firstAttribute="trailing" secondItem="yun-03-9na" secondAttribute="trailing" constant="20" id="vM3-fL-gk5"/>
+                            <constraint firstItem="v4u-Ty-FVF" firstAttribute="top" secondItem="UY6-7f-x7g" secondAttribute="bottom" constant="20" id="xn5-Wj-LrG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yp4-eZ-Q6r"/>
                     </view>
+                    <connections>
+                        <outlet property="emailID" destination="v4u-Ty-FVF" id="uqG-nB-dHP"/>
+                        <outlet property="label" destination="UY6-7f-x7g" id="QuP-f5-yBu"/>
+                        <outlet property="passwordID" destination="yun-03-9na" id="aE5-Jy-ukD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHG-5h-QmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
